@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete Account — FilmDevMate</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">FilmDevMate</a>
+    <nav class="switch">
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./delete-account.html" class="active">Delete Account</a>
+      <span class="sep">·</span>
+      <a href="../ko/delete-account.html">한국어</a>
+      <a href="../en/delete-account.html" class="active">English</a>
+      <a href="../ja/delete-account.html">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<h1>Delete Your Account</h1>
+<div class="meta">
+  <div>FilmDevMate · OBJECTYE</div>
+  <div>You can delete your account here without installing the app.</div>
+</div>
+
+<p>Sign in below with your FilmDevMate account and your account and data are deleted right away. This is the same operation as <strong>My &gt; Delete Account</strong> inside the app — it takes effect immediately rather than filing a request you have to wait on.</p>
+
+<div class="callout">
+<strong>What gets deleted</strong>
+<ul>
+  <li>Account details — email address, sign-in provider identifier, display name, profile</li>
+  <li>Development recipes you created and the reactions on them</li>
+  <li>Your development history and default process time settings</li>
+  <li>Development map territory records and film/developer addition requests</li>
+  <li>Exposure feedback data and photos submitted through the experimental feature</li>
+</ul>
+</div>
+
+<div class="callout">
+<strong>What is retained after deletion</strong>
+<ul>
+  <li>Access logs we are legally required to keep — 3 months under the Korean Protection of Communications Secrets Act</li>
+  <li>Records of enquiries and dispute handling received by email — 3 years under the Korean E-Commerce Act</li>
+  <li>Anonymous statistics that can no longer be linked back to you, and records other users saved under their own accounts</li>
+</ul>
+<p class="muted">See <a href="./privacy.html">Article 3 of the Privacy Policy</a> for the full retention schedule.</p>
+</div>
+
+<p class="muted">Deletion is permanent. Signing up again with the same email address will not restore your previous data.</p>
+
+<div class="callout legal-note" id="da-error" hidden></div>
+
+<section id="step-signin">
+  <h2>Step 1 — Verify it's you</h2>
+  <p>So that only the account owner can delete it, sign in the same way you do in the app.</p>
+  <div class="authbuttons">
+    <button type="button" id="da-google">Sign in with Google</button>
+    <button type="button" id="da-apple">Sign in with Apple</button>
+  </div>
+  <form id="da-password-form" class="authform">
+    <p class="muted">If you signed up with an email and password</p>
+    <input type="email" id="da-email" placeholder="Email" autocomplete="email" required>
+    <input type="password" id="da-password" placeholder="Password" autocomplete="current-password" required>
+    <button type="submit">Sign in</button>
+  </form>
+</section>
+
+<section id="step-confirm" hidden>
+  <h2>Step 2 — Confirm deletion</h2>
+  <p>You are signed in as:</p>
+  <p><strong id="da-account"></strong></p>
+  <label class="checkline">
+    <input type="checkbox" id="da-confirm-check">
+    I understand this account and its data will be permanently deleted and cannot be recovered.
+  </label>
+  <p>Type <strong>DELETE</strong> to confirm.</p>
+  <input type="text" id="da-confirm-input" autocomplete="off" aria-label="Confirmation phrase">
+  <div class="authbuttons">
+    <button type="button" id="da-delete-button" class="danger" disabled>Permanently delete account</button>
+    <button type="button" id="da-cancel-button">Cancel</button>
+  </div>
+</section>
+
+<section id="step-done" hidden>
+  <h2>Deletion complete</h2>
+  <p>Your account and its data have been deleted. Thank you for using FilmDevMate.</p>
+  <p class="muted">If the app is still installed, please uninstall it. Any sign-in details left on the device expire the next time it launches.</p>
+</section>
+
+<h2>If you cannot sign in</h2>
+<p>If you no longer have access to your Google or Apple account, or the steps above do not work, email <a href="mailto:develop@yeji-hong.com?subject=FilmDevMate%20account%20deletion%20request">develop@yeji-hong.com</a> from or naming your sign-up address. We verify your identity and complete the deletion within 7 business days, then reply to confirm.</p>
+</main>
+
+<footer class="site"><div class="wrap">
+FilmDevMate · OBJECTYE · Business registration 160-67-00737 · <a href="mailto:develop@yeji-hong.com">develop@yeji-hong.com</a>
+</div></footer>
+
+<script>
+  window.DA_STRINGS = {
+    confirmWord: "DELETE",
+    errorSignIn: "Sign-in failed. Please check your email and password.",
+    errorSession: "We could not verify your session. Please sign in again.",
+    errorDelete: "Deletion failed. Please try again shortly, or contact develop@yeji-hong.com.",
+  };
+</script>
+<script src="../assets/delete-account.js"></script>
+</body>
+</html>

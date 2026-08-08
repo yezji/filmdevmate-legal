@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アカウント削除 — FilmDevMate</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">FilmDevMate</a>
+    <nav class="switch">
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="./terms.html">利用規約</a>
+      <a href="./delete-account.html" class="active">アカウント削除</a>
+      <span class="sep">·</span>
+      <a href="../ko/delete-account.html">한국어</a>
+      <a href="../en/delete-account.html">English</a>
+      <a href="../ja/delete-account.html" class="active">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<h1>アカウントの削除（退会）</h1>
+<div class="meta">
+  <div>FilmDevMate · オブジェクティ（OBJECTYE）</div>
+  <div>アプリをインストールしなくても、このページから退会できます。</div>
+</div>
+
+<p>下記から FilmDevMate のアカウントでログインすると、その場でアカウントとデータが削除されます。アプリ内の<strong>マイ &gt; 退会</strong>とまったく同じ処理で、申請を受け付けて待つ方式ではなく即時に反映されます。</p>
+
+<div class="callout">
+<strong>削除されるデータ</strong>
+<ul>
+  <li>アカウント情報 — メールアドレス、ログインプロバイダの識別子、ニックネーム、プロフィール</li>
+  <li>ご自身が登録した現像レシピと、それに付いたリアクション</li>
+  <li>現像履歴および既定の工程時間の設定</li>
+  <li>現像マップの占有記録、フィルム・現像液の追加リクエスト履歴</li>
+  <li>ラボ機能から送信した露出フィードバックのデータおよび写真</li>
+</ul>
+</div>
+
+<div class="callout">
+<strong>削除後も残るもの</strong>
+<ul>
+  <li>法令上の保存義務があるアクセス記録 — 韓国「通信秘密保護法」に基づき3か月</li>
+  <li>メールで受け付けたお問い合わせ・紛争処理の記録 — 韓国「電子商取引法」に基づき3年</li>
+  <li>ご本人と結び付かなくなった匿名の統計、および他の利用者が自身のアカウントに保存した記録</li>
+</ul>
+<p class="muted">保存期間の詳細は<a href="./privacy.html">プライバシーポリシー第3条</a>をご覧ください。</p>
+</div>
+
+<p class="muted">削除は取り消せません。同じメールアドレスで再登録しても、以前のデータは復元されません。</p>
+
+<div class="callout legal-note" id="da-error" hidden></div>
+
+<section id="step-signin">
+  <h2>ステップ1 — ご本人の確認</h2>
+  <p>アカウントの所有者のみが削除できるよう、アプリでお使いの方法と同じ方法でログインしてください。</p>
+  <div class="authbuttons">
+    <button type="button" id="da-google">Googleでログイン</button>
+    <button type="button" id="da-apple">Appleでログイン</button>
+  </div>
+  <form id="da-password-form" class="authform">
+    <p class="muted">メールアドレスとパスワードで登録した場合</p>
+    <input type="email" id="da-email" placeholder="メールアドレス" autocomplete="email" required>
+    <input type="password" id="da-password" placeholder="パスワード" autocomplete="current-password" required>
+    <button type="submit">ログイン</button>
+  </form>
+</section>
+
+<section id="step-confirm" hidden>
+  <h2>ステップ2 — 削除の確認</h2>
+  <p>次のアカウントでログインしています。</p>
+  <p><strong id="da-account"></strong></p>
+  <label class="checkline">
+    <input type="checkbox" id="da-confirm-check">
+    このアカウントと関連データが完全に削除され、復元できないことを理解しました。
+  </label>
+  <p>確認のため <strong>削除</strong> と入力してください。</p>
+  <input type="text" id="da-confirm-input" autocomplete="off" aria-label="確認フレーズ">
+  <div class="authbuttons">
+    <button type="button" id="da-delete-button" class="danger" disabled>アカウントを完全に削除</button>
+    <button type="button" id="da-cancel-button">キャンセル</button>
+  </div>
+</section>
+
+<section id="step-done" hidden>
+  <h2>削除が完了しました</h2>
+  <p>アカウントと関連データを削除しました。FilmDevMate をご利用いただきありがとうございました。</p>
+  <p class="muted">アプリがまだ端末に残っている場合はアンインストールしてください。端末に残ったログイン情報は次回の起動時に自動的に失効します。</p>
+</section>
+
+<h2>ログインできない場合</h2>
+<p>Google・Apple アカウントが使えなくなった場合や、上記の手順が動作しない場合は、登録時のメールアドレスを添えて <a href="mailto:develop@yeji-hong.com?subject=FilmDevMate%20%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC">develop@yeji-hong.com</a> までご連絡ください。ご本人確認のうえ、7営業日以内に処理し、結果をご返信します。</p>
+</main>
+
+<footer class="site"><div class="wrap">
+FilmDevMate · オブジェクティ（OBJECTYE） · 事業者登録番号 160-67-00737 · <a href="mailto:develop@yeji-hong.com">develop@yeji-hong.com</a>
+</div></footer>
+
+<script>
+  window.DA_STRINGS = {
+    confirmWord: "削除",
+    errorSignIn: "ログインに失敗しました。メールアドレスとパスワードをご確認ください。",
+    errorSession: "ログイン情報を確認できませんでした。もう一度ログインしてください。",
+    errorDelete: "削除に失敗しました。しばらくしてから再試行するか、develop@yeji-hong.com までお問い合わせください。",
+  };
+</script>
+<script src="../assets/delete-account.js"></script>
+</body>
+</html>

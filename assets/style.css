@@ -204,6 +204,74 @@ footer.site .wrap { padding: 0; max-width: 760px; }
 
 .toc a:hover { color: var(--fg); }
 
+/* Account deletion page */
+
+.authbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.2em 0;
+}
+
+.authform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+  margin-top: 2em;
+}
+
+.authform p { margin: 0; font-size: 0.88rem; }
+
+button,
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+input[type="text"] { max-width: 360px; width: 100%; display: block; }
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover:not(:disabled) { border-color: var(--fg); }
+
+button:disabled,
+input:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.danger {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+
+button.danger:hover:not(:disabled) {
+  background: #c0392b;
+  border-color: #c0392b;
+  color: #ffffff;
+}
+
+.checkline {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 1.2em 0;
+  font-size: 0.95rem;
+}
+
+.checkline input { margin-top: 5px; }
+
 .home {
   min-height: 100vh;
   display: flex;
